@@ -10,6 +10,9 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
+    increment(state) {
+      state.count++
+    }
   },
   actions: {
   },
