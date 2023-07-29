@@ -6,9 +6,32 @@
     </nav>
     <router-view/>
     {{ $store.state.count }}
+    <br>
+
+    <ul>
+      <li v-for="user in visibleUsers" :key="user.id">
+        {{ user.id }} - {{ user.name }} - {{ user.isVisible }}
+      </li>
+    </ul>
+    <br>
+
+    {{ getUserById }}
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  computed: {
+    visibleUsers() {
+      return this.$store.getters.visibleUsers
+    },
+    getUserById() {
+      return this.$store.getters.getUserById(2)
+    }
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
