@@ -23,5 +23,8 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### Version
+- Vue 2
+
 ### Docs
 - Vuex: https://v3.vuex.vuejs.org/ja/
